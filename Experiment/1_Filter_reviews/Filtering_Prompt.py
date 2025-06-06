@@ -129,8 +129,6 @@ def load_checkpoint(checkpoint_file):
     except FileNotFoundError:
         return 0
 
-import json
-import csv
 # converts a JSON file to a CSV file.
 # json_path (str): Path to the input JSON file.
 # csv_path (str): Path to the output CSV file.
@@ -140,7 +138,7 @@ def convert_json_to_csv(json_path, csv_path):
             data = json.load(json_file)
 
         if not data:
-            print(f"⚠️ No data found in {json_path}. Skipping conversion.")
+            print(f"No data found in {json_path}. Skipping conversion.")
             return
 
         with open(csv_path, 'w', newline='', encoding='utf-8') as csv_file:
@@ -148,9 +146,9 @@ def convert_json_to_csv(json_path, csv_path):
             writer.writeheader()
             writer.writerows(data)
 
-        print(f"✅ Successfully converted {json_path} to {csv_path}")
+        print(f"Successfully converted {json_path} to {csv_path}")
     except Exception as e:
-        print(f"❌ Error converting {json_path} to CSV: {e}")
+        print(f"Error converting {json_path} to CSV: {e}")
 
 
 # Main function to process reviews and assign topics
@@ -211,12 +209,12 @@ def remove_duplicate_headers(csv_file_path):
 
 # File paths
 # Process reviews for multiple categories
-categories = ["Photography", "Productivity", "Art & Design"]
+categories = ["Photography", "Productivity", "Art_and_Design"]
 
 for category in categories:
-    cat_file_name = f'/Users/buthayna/Desktop/AppReviews/Current_2025/Final_Tables_Graphs/filtering/sample_files_small/{category}.csv'
-    outname = f'/Users/buthayna/Desktop/AppReviews/Current_2025/Final_Tables_Graphs/filtering/results/{category}_informatized.csv'
-    log_file = f'/Users/buthayna/Desktop/AppReviews/Current_2025/Final_Tables_Graphs/filtering/logs/{category}_sample'
+    cat_file_name = f'/1_Filter_reviews/{category}_informative_labeled.csv'
+    outname = f'/1_Filter_reviews/results/{category}_filtered.csv'
+    log_file = f'/1_Filter_reviews/logs/{category}_sample'
 
     # Run the function
     determine_informative_reviews(cat_file_name, outname, log_file)
