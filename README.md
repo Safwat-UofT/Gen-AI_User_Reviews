@@ -44,7 +44,7 @@ This folder contains the script for topic assignment.
 
 ---
 
-## 📝 Notes  
+## Notes  
 - All reviews used in this package are anonymized and sampled in accordance with ethical research practices.  
 - Prompts were run using OpenAI’s `gpt-4o-mini` model unless otherwise specified.
 
