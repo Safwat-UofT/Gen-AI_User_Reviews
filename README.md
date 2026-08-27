@@ -1,6 +1,6 @@
 # Gen-AI_User_Reviews  
 **Replication Package for:**  
-**_Understanding the Challenges and Promises of Developing Generative AI Apps: An Empirical Study_**
+**_Understanding the Challenges and Opportunities of Developing Generative AI Apps: An Empirical Study_**
 
 This repository contains the replication package for our study on user reviews of generative AI mobile applications. It includes all scripts, sample data, and prompts used across the three main stages of our experiment.
 
